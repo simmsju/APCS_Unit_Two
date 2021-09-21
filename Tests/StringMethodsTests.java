@@ -30,13 +30,25 @@ public class StringMethodsTests {
     }
 
     @Test
-    @Order(7)
     void NamesTest() throws IOException {
-        String[] args = null;
         System.setIn(new FileInputStream("data_files/names.txt"));
-        Names.main(args);
+        Names.main(null);
         assertTrue(outContent.toString().contains("Katherine Johnson\n16\nKJ\n1\n-1\n7\nKathnson Joherine"),
                 "Did you use the correct arguments?");
 
+    }
+
+    @Test
+    void PasswordTuring() throws IOException {
+        System.setIn(new FileInputStream("data_files/passwordOne.txt"));
+        //Password.main(null);
+        assertTrue(outContent.toString().contains("AIInng3075"));
+    }
+
+    @Test
+    void CoursesTestEcon() throws IOException {
+        System.setIn(new FileInputStream("data_files/courses.txt"));
+        // Courses.main(null);
+        assertTrue(outContent.toString().contains("Department: ECON\nCourse Number: 203\nTitle: Advanced Macroeconomics"));
     }
 }
