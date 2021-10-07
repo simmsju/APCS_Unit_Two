@@ -41,14 +41,14 @@ public class StringMethodsTests {
     @Test
     void PasswordTuring() throws IOException {
         System.setIn(new FileInputStream("data_files/passwordOne.txt"));
-        //Password.main(null);
+        Password.main(null);
         assertTrue(outContent.toString().contains("AIInng3075"));
     }
 
     @Test
     void CoursesTestEcon() throws IOException {
         System.setIn(new FileInputStream("data_files/courses.txt"));
-        // Courses.main(null);
+        Courses.main(null);
         assertTrue(outContent.toString().contains("Department: ECON\nCourse Number: 203\nTitle: Advanced Macroeconomics"));
     }
 }
